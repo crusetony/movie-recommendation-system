@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#080d19" />
+    <link rel="stylesheet" href="%PUBLIC_URL%/startup.css" />
+    <meta
+      name="description"
+      content="基于 DeepSeek 自然语言解析与 TMDB 实时数据的智能电影推荐系统"
+    />
+    <title>电影推荐系统</title>
+  </head>
+  <body>
+    <noscript><style>#cinema-startup { display: none; }</style>请启用 JavaScript 后使用电影推荐系统。</noscript>
+    <div id="cinema-startup" class="cinema-startup" role="status" aria-live="polite" aria-label="正在加载电影推荐系统">
+      <div class="cinema-startup__glow" aria-hidden="true"></div>
+      <div class="cinema-startup__content">
+        <div class="cinema-startup__frame" aria-hidden="true">
+          <svg viewBox="0 0 44 44"><circle cx="22" cy="22" r="20" /><path d="M12 10h20v24H12zM12 16h20M12 28h20M17 10v24M27 10v24" /><path d="m20 19 6 3-6 3z" /></svg>
+          <span class="cinema-startup__orbit"></span>
+        </div>
+        <div class="cinema-startup__title" aria-hidden="true">CINEMA</div>
+        <p class="cinema-startup__caption">故事，即将开始</p>
+        <div class="cinema-startup__track" aria-hidden="true"><span></span></div>
+        <span class="cinema-startup__note" aria-hidden="true">LIGHTS · CAMERA · CINEMA</span>
+      </div>
+    </div>
+    <div id="root"></div>
+  </body>
+</html>

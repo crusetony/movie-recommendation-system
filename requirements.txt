@@ -1,0 +1,15 @@
+ # Backend and configuration
+fastapi>=0.115.0
+uvicorn[standard]>=0.32.0
+pydantic>=2.10.0
+pydantic-settings>=2.6.0
+python-dotenv>=1.0.1
+
+# External APIs and short-lived local caching
+httpx>=0.28.0
+cachetools>=5.5.0
+openai>=1.68.0
+python-multipart>=0.0.20
+
+# Tests
+pytest>=8.3.0

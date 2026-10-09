@@ -1,0 +1,8 @@
+# Install in a separate optional Python 3.11/3.12 environment.
+# The base backend remains usable without these packages.
+-r requirements.txt
+
+torch>=2.6,<3
+sentence-transformers>=3.4,<6
+transformers>=4.26,<6
+pillow>=11,<13

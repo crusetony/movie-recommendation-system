@@ -1,0 +1,18 @@
+/* Available before React and its bundle; uses no external images or fonts. */
+html, body { margin: 0; background: #080d19; }
+body:has(> .cinema-startup) { overflow: hidden; }
+.cinema-startup { position: fixed; inset: 0; z-index: 10000; display: grid; place-items: center; overflow: hidden; background: #080d19; color: #eef0f4; opacity: 1; transition: opacity 320ms ease; font-family: 'PingFang SC', 'Microsoft YaHei', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+.cinema-startup[data-state="leaving"] { opacity: 0; pointer-events: none; }
+.cinema-startup__glow { position: absolute; width: min(700px, 130vw); aspect-ratio: 1; border-radius: 50%; background: radial-gradient(circle, rgba(36,84,255,.2), transparent 65%); }
+.cinema-startup__content { position: relative; display: flex; flex-direction: column; align-items: center; padding: 32px; }
+.cinema-startup__frame { width: 96px; height: 96px; position: relative; display: grid; place-items: center; margin-bottom: 30px; }
+.cinema-startup__frame svg { width: 66px; height: 66px; fill: none; stroke: #dfff00; stroke-width: 1; }
+.cinema-startup__orbit { position: absolute; inset: 0; border: 1px solid rgba(223,255,0,.12); border-top-color: #dfff00; border-right-color: rgba(223,255,0,.5); border-radius: 50%; animation: cinema-startup-orbit 1.8s linear infinite; }
+.cinema-startup__title { font-family: Impact, 'Arial Narrow', 'Arial Black', sans-serif; font-size: clamp(48px, 12vw, 76px); line-height: 1; letter-spacing: .06em; }
+.cinema-startup__caption { margin: 18px 0 30px; color: #a8b7d2; font-size: 13px; letter-spacing: .25em; }
+.cinema-startup__track { width: min(230px, 60vw); height: 3px; overflow: hidden; background: rgba(145,173,255,.17); }
+.cinema-startup__track span { display: block; width: 45%; height: 100%; background: #dfff00; animation: cinema-startup-track 1.2s ease-in-out infinite; }
+.cinema-startup__note { margin-top: 18px; color: #7183a4; font: 9px ui-monospace, SFMono-Regular, Consolas, monospace; letter-spacing: .13em; }
+@keyframes cinema-startup-orbit { to { transform: rotate(360deg); } }
+@keyframes cinema-startup-track { from { transform: translateX(-105%); } to { transform: translateX(330%); } }
+@media (prefers-reduced-motion: reduce) { .cinema-startup, .cinema-startup * { animation: none !important; transition: none !important; } }
